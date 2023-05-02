@@ -1,0 +1,5 @@
+---
+ - hosts: all
+   tasks:
+     - debug:
+         msg: "welcome to varains because linux coatching"
