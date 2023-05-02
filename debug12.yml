@@ -1,0 +1,8 @@
+---
+ - name: checking kernel version this method output display
+   hosts: all
+   tasks:
+     - name: kernel info output
+       command: uname -a
+       register: kernel
+     - debug: var=kernel
