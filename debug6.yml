@@ -1,0 +1,8 @@
+---
+ - name: usage of debug module
+   hosts: all
+   tasks:
+     - name: usage of debug module display to ip address msg
+       debug:
+#        msg: "my ip address of server:{{ansible_default_ipv4.address}}"
+         var: ansible_default_ipv4.address
