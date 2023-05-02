@@ -1,0 +1,8 @@
+---
+ - name: only kernel standed ouput display method
+   hosts: all
+   tasks:
+     - name: kernel stdout only
+       command: uname -a
+       register: kernel
+     - debug: var=kernel.stdout
