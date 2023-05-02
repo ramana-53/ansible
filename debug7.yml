@@ -1,0 +1,11 @@
+---
+ - name: facts display
+   hosts: all
+   tasks:
+     - name: display all facts variables
+       debug:
+        msg:
+         - "my hostname is :{{ansible_hostname}}"
+         - "my ip address is :{{ansible_facts['fqdn']}}"
+         - "my dns is :{{ansible_dns}}"
+         - "ip v4 is :{{ansible_facts.default_ipv4}}"
