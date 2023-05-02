@@ -1,0 +1,10 @@
+---
+ - name: multiple pkg install
+   hosts: bujji
+   tasks:
+     - name: multiple pkg install with playbook to loops
+       yum: name="{{item}}" state=present
+       with_items:
+         - httpd
+         - vsftpd
+         - ftp
