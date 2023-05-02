@@ -1,0 +1,11 @@
+---
+ - name: multiple users creation
+   hosts: all
+   tasks:
+     - name: multiple users creation with playbook using loops
+       user: name="{{item}}" state=present
+       with_items:
+         - vara1
+         - bujji2
+         - ramana3
+         - peram4
