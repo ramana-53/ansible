@@ -1,0 +1,24 @@
+---
+  - name: checkng multiple tasks display with tags
+    hosts: all
+    tasks:
+      - name: display kernel
+        command: uname -a
+        tags: ker
+        register: kernel
+      - debug: var=kernel.stdout
+      - name: display date
+        command: date
+        tags: time
+        register: time
+      - debug: var=time.stdout
+      - name: display uptime
+        command: uptime
+        tags: load
+        register: utime
+      - debug: var=utime.stdout
+      - name: display hostname
+        command: hostname
+        tags: name
+        register: hname
+      - debug: var=hname.stdout
