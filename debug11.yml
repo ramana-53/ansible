@@ -1,0 +1,6 @@
+---
+ - name: checking kernel version
+   hosts: all
+   tasks:
+     - name: kernel info
+       command: uname -a
