@@ -1,0 +1,9 @@
+---
+ - name: multiple service started
+   hosts: bujji
+   tasks:
+     - name: multiple service start with loops to playbook
+       service: name="{{item}}" state=restarted
+       loop:
+         - httpd
+         - vsftpd
