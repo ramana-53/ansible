@@ -1,0 +1,6 @@
+---
+ - name: adding the line
+   hosts: all
+   tasks:
+     - name: this is adding the debug line
+       debug: msg="welcome to bujji"
