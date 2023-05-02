@@ -1,0 +1,10 @@
+---
+ - name: multiple comments on single module
+   hosts: all
+   tasks:
+     - name: adding the multiple lines on single debug
+       debug:
+        msg:
+         - "welcome to varains bujji"
+         - "welcome to varains peram"
+         - "welcome to varains ramana"
