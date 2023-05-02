@@ -1,0 +1,7 @@
+---
+ - name: using var parameters
+   hosts: all
+   tasks:
+     - name: this is variable printing"
+       debug:
+        var: inventory_hostname
