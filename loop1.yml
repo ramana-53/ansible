@@ -1,0 +1,12 @@
+---
+ - name: multiple files create with loops
+   hosts: all
+   tasks:
+     - name: files creation with loops playbook
+       command: touch /tmp/"{{item}}"
+       with_items:
+         - file1
+         - file2
+         - file3
+         - file4
+         - file5
