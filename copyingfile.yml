@@ -1,0 +1,6 @@
+---
+  - name: this is 1st playbook
+    hosts: all
+    tasks:
+      - name: copying file from one to one
+        copy: src=/var/log/messages dest=/tmp/
