@@ -1,0 +1,12 @@
+---
+ - name: install rpm
+   hosts: all
+   tasks:
+     - name: install httpd
+       yum: name=httpd state=present
+     - name: edit the file
+       copy: src=/var/www/html/index.html dest=/var/www/html
+       notify: restart the service
+   handlers:
+     - name: restart the service
+       service: name=httpd state=started enabled=yes
