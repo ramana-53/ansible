@@ -1,0 +1,24 @@
+---
+ - name: service start
+   hosts: all
+   tasks:
+     - name: httpd service
+       service: name=httpd state=started enabled=yes
+
+     - name: sshd service
+       service: name=sshd state=started enabled=yes
+
+     - name: vsftpd service
+       service: name=vsftpd state=started enabled=yes
+
+     - name: samba service
+       service: name=smb state=started enabled=yes
+
+     - name: nfs service
+       service: name=nfs state=started enabled=yes
+
+     - name: autofs service
+       service: name=autofs state=started enabled=yes
+
+     - name: ntpd service
+       service: name=ntpd state=started enabled=yes
