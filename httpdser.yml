@@ -1,0 +1,6 @@
+---
+ - name: adding the line
+   hosts: all
+   tasks:
+     - name: this is my 1st playbook with httpd service across the reboot
+       service: name=httpd state=started enabled=yes
