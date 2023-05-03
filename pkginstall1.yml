@@ -1,0 +1,12 @@
+---
+ - name: install rpms
+   hosts: all
+   tasks:
+     - name: httpd pkg install
+       yum: name=httpd state=present
+     - name: vsftpd pkg install
+       yum: name=vsftpd state=present
+     - name: ftp pkg install
+       yum: name=ftp state=present
+     - name: samba pkg install
+       yum: name=samba state=present
