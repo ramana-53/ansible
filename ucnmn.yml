@@ -1,0 +1,6 @@
+---
+   - name: ading the user controller node and manager node
+     hosts: all
+     tasks:
+       - name: controller node and manager node
+         user: name=dadmom state=present createhome=yes
