@@ -1,0 +1,8 @@
+---
+ - name: this is my 1st playbook apache
+   hosts: all
+   tasks:
+     - name: this is my 1st create index file with playbook
+       file: dest=/var/www/html/index.html state=touch
+     - name: adding lineinfile
+       lineinfile: dest=/var/www/html/index.html line=vara-sys53-playbook
